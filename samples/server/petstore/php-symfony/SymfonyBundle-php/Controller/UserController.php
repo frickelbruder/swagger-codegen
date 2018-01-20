@@ -33,6 +33,7 @@ use \Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Swagger\Server\Api\UserApiInterface;
 use Swagger\Server\Model\User;
@@ -125,6 +126,8 @@ class UserController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -209,6 +212,8 @@ class UserController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -293,6 +298,8 @@ class UserController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -369,6 +376,8 @@ class UserController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -448,6 +457,8 @@ class UserController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -534,6 +545,8 @@ class UserController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -599,6 +612,8 @@ class UserController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -692,6 +707,8 @@ class UserController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }

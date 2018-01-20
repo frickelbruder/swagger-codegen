@@ -33,6 +33,7 @@ use \Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Swagger\Server\Api\PetApiInterface;
 use Swagger\Server\Model\ApiResponse;
@@ -131,6 +132,8 @@ class PetController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -217,6 +220,8 @@ class PetController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -304,6 +309,8 @@ class PetController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -388,6 +395,8 @@ class PetController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -472,6 +481,8 @@ class PetController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -565,6 +576,8 @@ class PetController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -659,6 +672,8 @@ class PetController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
@@ -752,6 +767,8 @@ class PetController extends Controller
                     ]
                 )
             );
+        } catch (HttpExceptionInterface $httpException) {
+            return $this->createErrorResponse($httpException);
         } catch (Exception $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
